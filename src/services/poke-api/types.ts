@@ -1,4 +1,5 @@
 export * from './endpoints/berries/types'
+export * from './endpoints/contests/types'
 
 export interface ApiResource {
   url: string
@@ -27,4 +28,15 @@ export interface ApiResourceList<ApiResource extends ResourceListBase | any = Re
 export interface Name {
   name: string
   language: NamedApiResource
+}
+
+export interface Effect {
+  effect: string
+  language: NamedApiResource
+}
+
+export interface FlavorText {
+  flavor_text: string
+  language: NamedApiResource
+  version: NamedApiResource
 }
