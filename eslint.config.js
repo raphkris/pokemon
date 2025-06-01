@@ -22,6 +22,31 @@ export default tseslint.config(
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
+      ],
+      'no-restricted-imports': ['error', { patterns: ['@/features/*/*'] }],
+      'import/no-restricted-paths': [
+        'error',
+        {
+          zones: [
+            // enforce unidirectional codebase:
+            // e.g. src/app can import from src/features but not the other way around
+            // https://github.com/alan2207/bulletproof-react/blob/master/docs/project-structure.md
+            {
+              target: './src/features',
+              from: './src/app'
+            },
+            {
+              target: [
+                './src/components',
+                './src/hooks',
+                './src/lib',
+                './src/types',
+                './src/utils'
+              ],
+              from: ['./src/features', './src/app']
+            }
+          ]
+        }
       ]
     }
   }
