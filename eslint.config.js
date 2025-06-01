@@ -44,6 +44,11 @@ export default tseslint.config(
                 './src/utils'
               ],
               from: ['./src/features', './src/app']
+            },
+            // services should be configured for use as a library
+            {
+              target: './src/services',
+              from: './src/lib'
             }
           ]
         }
