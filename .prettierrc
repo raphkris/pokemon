@@ -1,1 +1,9 @@
-{}
+{
+  "endOfLine": "lf",
+  "jsxSingleQuote": true,
+  "proseWrap": "always",
+  "semi": false,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "trailingComma": "none"
+}
