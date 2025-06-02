@@ -2,6 +2,7 @@ import { berriesEndpoints } from './endpoints/berries'
 import { contestEndpoints } from './endpoints/contests'
 import { encountersEndpoints } from './endpoints/encounters'
 import { evolutionEndpoints } from './endpoints/evolution'
+import { gamesEndpoints } from './endpoints/games'
 import { utilityEndpoints } from './endpoints/utility'
 
 export const pokeApi = {
@@ -9,5 +10,6 @@ export const pokeApi = {
   contests: contestEndpoints,
   encounters: encountersEndpoints,
   evolution: evolutionEndpoints,
+  games: gamesEndpoints,
   utility: utilityEndpoints
 }

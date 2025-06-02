@@ -2,6 +2,7 @@ export * from './endpoints/berries/types'
 export * from './endpoints/contests/types'
 export * from './endpoints/encounters/types'
 export * from './endpoints/evolution/types'
+export * from './endpoints/games/types'
 export * from './endpoints/utility/types'
 
 export interface ApiResource {
