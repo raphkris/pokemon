@@ -4,6 +4,7 @@ export * from './endpoints/encounters/types'
 export * from './endpoints/evolution/types'
 export * from './endpoints/games/types'
 export * from './endpoints/items/types'
+export * from './endpoints/locations/types'
 export * from './endpoints/utility/types'
 
 export interface ApiResource {
