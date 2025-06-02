@@ -6,8 +6,70 @@ export interface ApiResource {
   url: string
 }
 
+export interface Description {
+  description: string
+  language: NamedApiResource
+}
+
+export interface Effect {
+  effect: string
+  language: NamedApiResource
+}
+
+export interface Encounter {
+  min_level: number
+  max_level: number
+  condition_values: NamedApiResource[]
+  chance: number
+  method: NamedApiResource
+}
+
+export interface FlavorText {
+  flavor_text: string
+  language: NamedApiResource
+  version: NamedApiResource
+}
+
+export interface GenerationGameIndex {
+  game_index: number
+  generation: NamedApiResource
+}
+
+export interface MachineVersionDetail {
+  machine: ApiResource
+  version_group: NamedApiResource
+}
+
+export interface Name {
+  name: string
+  language: NamedApiResource
+}
+
 export interface NamedApiResource extends ApiResource {
   name: string
+}
+
+export interface VerboseEffect {
+  effect: string
+  short_effect: string
+  language: NamedApiResource
+}
+
+export interface VersionEncounterDetail {
+  version: NamedApiResource
+  max_chance: number
+  encounter_details: Encounter[]
+}
+
+export interface VersionGameIndex {
+  game_index: number
+  version: NamedApiResource
+}
+
+export interface VersionGroupFlavorText {
+  text: string
+  language: NamedApiResource
+  version_group: NamedApiResource
 }
 
 export interface ResourceListBase {
@@ -24,20 +86,4 @@ export interface NamedApiResourceList<
 
 export interface ApiResourceList<ApiResource extends ResourceListBase | any = ResourceListBase> {
   results?: ApiResource[]
-}
-
-export interface Name {
-  name: string
-  language: NamedApiResource
-}
-
-export interface Effect {
-  effect: string
-  language: NamedApiResource
-}
-
-export interface FlavorText {
-  flavor_text: string
-  language: NamedApiResource
-  version: NamedApiResource
 }
