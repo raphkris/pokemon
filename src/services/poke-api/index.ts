@@ -7,6 +7,7 @@ import { itemsEndpoints } from './endpoints/items'
 import { locationsEndpoints } from './endpoints/locations'
 import { machinesEndpoints } from './endpoints/machines'
 import { movesEndpoints } from './endpoints/moves'
+import { pokemonEndpoints } from './endpoints/pokemon'
 import { utilityEndpoints } from './endpoints/utility'
 
 export const pokeApi = {
@@ -19,5 +20,6 @@ export const pokeApi = {
   locations: locationsEndpoints,
   machines: machinesEndpoints,
   moves: movesEndpoints,
+  pokemon: pokemonEndpoints,
   utility: utilityEndpoints
 }
