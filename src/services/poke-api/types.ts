@@ -6,7 +6,7 @@ export * from './endpoints/games/types'
 export * from './endpoints/items/types'
 export * from './endpoints/locations/types'
 export * from './endpoints/machines/types'
-export * from './endpoints/machines/types'
+export * from './endpoints/moves/types'
 export * from './endpoints/pokemon/types'
 export * from './endpoints/utility/types'
 

@@ -4,6 +4,7 @@ import * as moveCategories from './move-categories/index'
 import * as moveDamageClasses from './move-damage-classes/index'
 import * as moveLearnMethods from './move-learn-methods/index'
 import * as moveTargets from './move-targets/index'
+import * as moves from './moves/index'
 
 export const movesEndpoints = {
   moveAilments: moveAilments,
@@ -11,5 +12,6 @@ export const movesEndpoints = {
   moveCategories: moveCategories,
   moveDamageClasses: moveDamageClasses,
   moveLearnMethods: moveLearnMethods,
-  moveTargets: moveTargets
+  moveTargets: moveTargets,
+  moves: moves
 }
