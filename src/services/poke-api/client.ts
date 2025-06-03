@@ -11,7 +11,7 @@ export const queryClient = new QueryClient({
       staleTime: 1000 * 60 * 5, // Data is considered fresh for 5 minutes
       gcTime: 1000 * 60 * 60 * 1, // Garbage collection time: 1 hour
       retry: 1, // Retry failed requests 1 time
-      refetchOnWindowFocus: true // Refetch data when the window regains focus
+      refetchOnWindowFocus: false // Refetch data when the window regains focus
     }
   }
 })
