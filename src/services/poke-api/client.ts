@@ -1,5 +1,6 @@
 import { QueryClient } from '@tanstack/react-query'
 import { API_BASE_URL } from './config'
+import type { NamedApiResourceList } from './types'
 
 /**
  * Creates and configures a TanStack QueryClient.
@@ -96,6 +97,91 @@ export async function fetchData<T>(
     if (response.status === 204) {
       // No Content
       return undefined as T
+    }
+
+    return response.json() as Promise<T>
+  } catch (error) {
+    console.error(`API request to ${url} failed:`, error)
+    throw error // Re-throw the error to be handled by TanStack Query
+  }
+}
+
+export type Identifier = number | string
+
+export const getItem = async <T>(endpoint: string, id: Identifier): Promise<T | undefined> => {
+  const url = buildUrl(endpoint, id)
+
+  const response = getData<T>(url)
+
+  return response
+}
+
+export const listItems = async (
+  endpoint: string,
+  limit?: number,
+  offset?: number
+): Promise<NamedApiResourceList | undefined> => {
+  // Build query string for limit and offset
+  const params = new URLSearchParams()
+  if (limit !== undefined) params.append('limit', String(limit))
+  if (offset !== undefined) params.append('offset', String(offset))
+  const queryString = params.toString()
+
+  const url = buildUrl(endpoint, undefined, queryString)
+
+  const response = getData<NamedApiResourceList | undefined>(url)
+
+  return response
+}
+
+const buildUrl = (endpoint: string, id?: Identifier, queryString?: string) => {
+  let url = `${API_BASE_URL}/${endpoint}`
+
+  if (id) url += `/${id.toString()}`
+
+  if (queryString && queryString.length > 0) url += `?${queryString}`
+
+  return url
+}
+
+const headers = {
+  'Content-Type': 'application/json',
+  Accept: 'application/json'
+}
+
+const getData = async <T>(url: string): Promise<T | undefined> => {
+  try {
+    const response = await fetch(url, { headers })
+
+    if (response.status === 204) return undefined as T
+
+    if (!response.ok) {
+      let errorData
+
+      try {
+        // Attempt to parse error response as JSON
+        errorData = await response.json()
+      } catch (e) {
+        // If response is not JSON, use status text
+        errorData = {
+          message: response.statusText,
+          detail: response.statusText
+        }
+      }
+
+      // Construct a more informative error message
+      const errorMessage =
+        errorData?.detail || errorData?.message || `Request failed with status ${response.status}`
+
+      const error = new Error(errorMessage) as Error & {
+        status?: number
+        data?: any
+      }
+
+      error.status = response.status
+      error.data = errorData // Attach the parsed error data
+
+      throw error
     }
 
     return response.json() as Promise<T>
