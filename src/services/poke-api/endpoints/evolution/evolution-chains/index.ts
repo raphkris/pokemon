@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EvolutionChain } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'evolution-chain'
+const path = PokeApiRoutes.Evolution.EvolutionChain
 
 export const getEvolutionChains = async (
   limit?: number,

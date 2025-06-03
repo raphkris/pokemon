@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { BerryFirmness } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'berry-firmness'
+const path = PokeApiRoutes.Berries.BerryFirmness
 
 export const getBerryFirmnesses = async (
   limit?: number,

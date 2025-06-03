@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PokeathlonStat } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'pokeathlon-stat'
+const path = PokeApiRoutes.Pokemon.PokeathlonStat
 
 export const getPokeathlonStats = async (
   limit?: number,

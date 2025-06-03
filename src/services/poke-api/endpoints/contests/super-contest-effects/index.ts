@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { SuperContestEffect } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'super-contest-effect'
+const path = PokeApiRoutes.Contests.SuperContestEffect
 
 export const getSuperContestEffects = async (
   limit?: number,

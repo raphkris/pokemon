@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PalParkArea } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'pal-park-area'
+const path = PokeApiRoutes.Locations.PalParkArea
 
 export const getPalParkAreas = async (
   limit?: number,

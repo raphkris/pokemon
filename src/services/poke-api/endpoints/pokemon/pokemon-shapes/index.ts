@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PokemonShape } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'pokemon-shape'
+const path = PokeApiRoutes.Pokemon.PokemonShape
 
 export const getPokemonShapes = async (
   limit?: number,

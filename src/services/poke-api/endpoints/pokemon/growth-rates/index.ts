@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { GrowthRate } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'growth-rate'
+const path = PokeApiRoutes.Pokemon.GrowthRate
 
 export const getGrowthRates = async (
   limit?: number,

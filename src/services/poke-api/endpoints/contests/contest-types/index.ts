@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { ContestType } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'contest-type'
+const path = PokeApiRoutes.Contests.ContestType
 
 export const getContestTypes = async (
   limit?: number,

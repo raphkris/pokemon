@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Pokemon } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'pokemon'
+const path = PokeApiRoutes.Pokemon.Pokemon
 
 /**
  * Fetches a paginated list of Pokémon or a single Pokémon by id or name.

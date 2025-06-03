@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Gender } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'gender'
+const path = PokeApiRoutes.Pokemon.Gender
 
 export const getGenders = async (
   limit?: number,

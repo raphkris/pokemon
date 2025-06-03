@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { MoveCategory } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'move-category'
+const path = PokeApiRoutes.Moves.MoveCategory
 
 export const getMoveCategories = async (
   limit?: number,

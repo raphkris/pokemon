@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Generation } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'generation'
+const path = PokeApiRoutes.Games.Generation
 
 export const getGenerations = async (
   limit?: number,

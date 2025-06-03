@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { MoveDamageClass } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'move-damage-class'
+const path = PokeApiRoutes.Moves.MoveDamageClass
 
 export const getMoveDamageClasses = async (
   limit?: number,

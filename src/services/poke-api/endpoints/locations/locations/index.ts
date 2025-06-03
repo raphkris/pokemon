@@ -1,7 +1,8 @@
 import { fetchData } from '@/services/poke-api/client'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 
-const path = 'location'
+const path = PokeApiRoutes.Locations.Location
 
 export const getLocations = async (
   limit?: number,

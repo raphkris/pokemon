@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { Nature } from './types'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'nature'
+const path = PokeApiRoutes.Pokemon.Nature
 
 export const getNatures = async (
   limit?: number,

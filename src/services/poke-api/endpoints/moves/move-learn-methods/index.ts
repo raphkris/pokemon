@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { MoveLearnMethod } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'move-learn-method'
+const path = PokeApiRoutes.Moves.MoveLearnMethod
 
 export const getMoveLearnMethods = async (
   limit?: number,

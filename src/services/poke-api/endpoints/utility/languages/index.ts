@@ -1,8 +1,9 @@
+import { PokeApiRoutes } from '@/services/poke-api/config'
 import { fetchData } from '../../../client'
 import type { NamedApiResourceList } from '../../../types'
 import type { Language } from './types'
 
-const path = 'language'
+const path = PokeApiRoutes.Utility.Language
 
 export const getLanguages = async (
   limit?: number,

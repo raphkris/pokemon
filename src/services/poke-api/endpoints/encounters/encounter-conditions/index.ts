@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EncounterCondition } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'encounter-condition'
+const path = PokeApiRoutes.Encounters.EncounterCondition
 
 export const getEncounterConditions = async (
   limit?: number,

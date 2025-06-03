@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PokemonColor } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'pokemon-color'
+const path = PokeApiRoutes.Pokemon.PokemonColor
 
 export const getPokemonColors = async (
   limit?: number,

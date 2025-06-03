@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EncounterMethod } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'encounter-method'
+const path = PokeApiRoutes.Encounters.EncounterMethod
 
 export const getEncounterMethods = async (
   limit?: number,

@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { ItemPocket } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'item-pocket'
+const path = PokeApiRoutes.Items.ItemPocket
 
 export const getItemPockets = async (
   limit?: number,

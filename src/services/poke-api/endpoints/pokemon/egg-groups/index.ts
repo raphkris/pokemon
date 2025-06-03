@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EggGroup } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'egg-group'
+const path = PokeApiRoutes.Pokemon.EggGroup
 
 export const getEggGroups = async (
   limit?: number,

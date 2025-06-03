@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { ItemAttribute } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'item-attribute'
+const path = PokeApiRoutes.Items.ItemAttribute
 
 export const getItemAttributes = async (
   limit?: number,

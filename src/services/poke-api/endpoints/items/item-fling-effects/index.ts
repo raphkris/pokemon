@@ -1,8 +1,9 @@
 import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { ItemFlingEffect } from './types'
+import { PokeApiRoutes } from '@/services/poke-api/config'
 
-const path = 'item-fling-effect'
+const path = PokeApiRoutes.Items.ItemFlingEffect
 
 export const getItemFlingEffects = async (
   limit?: number,
