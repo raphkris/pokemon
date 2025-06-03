@@ -1,11 +1,11 @@
-import * as generations from './generations/index'
-import * as pokedexes from './pokedexes/index'
-import * as version from './version/index'
-import * as versionGroups from './version-groups/index'
+import * as Generations from './generations/index'
+import * as Pokedexes from './pokedexes/index'
+import * as Version from './version/index'
+import * as VersionGroups from './version-groups/index'
 
-export const gamesEndpoints = {
-  generations: generations,
-  pokedexes: pokedexes,
-  version: version,
-  versionGroups: versionGroups
+export const GamesEndpoints = {
+  Generations,
+  Pokedexes,
+  Version,
+  VersionGroups
 }

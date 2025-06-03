@@ -1,11 +1,11 @@
-import * as locations from './locations/index'
-import * as locationAreas from './location-areas/index'
-import * as palParkAreas from './pal-park-areas/index'
-import * as regions from './regions/index'
+import * as Locations from './locations/index'
+import * as LocationAreas from './location-areas/index'
+import * as PalParkAreas from './pal-park-areas/index'
+import * as Regions from './regions/index'
 
-export const locationsEndpoints = {
-  locations: locations,
-  locationAreas: locationAreas,
-  palParkAreas: palParkAreas,
-  regions: regions
+export const LocationsEndpoints = {
+  Locations,
+  LocationAreas,
+  PalParkAreas,
+  Regions
 }

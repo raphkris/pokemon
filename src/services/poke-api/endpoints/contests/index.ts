@@ -1,9 +1,9 @@
-import * as contestEffects from './contest-effects/index'
-import * as contestTypes from './contest-types/index'
-import * as superContestEffects from './super-contest-effects/index'
+import * as ContestEffects from './contest-effects/index'
+import * as ContestTypes from './contest-types/index'
+import * as SuperContestEffects from './super-contest-effects/index'
 
-export const contestEndpoints = {
-  contestEffects: contestEffects,
-  contestTypes: contestTypes,
-  superContestEffects: superContestEffects
+export const ContestEndpoints = {
+  ContestEffects,
+  ContestTypes,
+  SuperContestEffects
 }

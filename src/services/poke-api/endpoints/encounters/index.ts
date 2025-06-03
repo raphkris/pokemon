@@ -1,9 +1,9 @@
-import * as encounterConditionValues from './encounter-condition-values/index'
-import * as encounterConditions from './encounter-conditions/index'
-import * as encounterMethods from './encounter-methods/index'
+import * as EncounterConditionValues from './encounter-condition-values/index'
+import * as EncounterConditions from './encounter-conditions/index'
+import * as EncounterMethods from './encounter-methods/index'
 
-export const encountersEndpoints = {
-  encounterConditionValues: encounterConditionValues,
-  encounterConditions: encounterConditions,
-  encounterMethods: encounterMethods
+export const EncountersEndpoints = {
+  EncounterConditionValues,
+  EncounterConditions,
+  EncounterMethods
 }

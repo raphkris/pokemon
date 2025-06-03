@@ -1,7 +1,7 @@
-import * as evolutionChains from './evolution-chains/index'
-import * as evolutionTriggers from './evolution-triggers/index'
+import * as EvolutionChains from './evolution-chains/index'
+import * as EvolutionTriggers from './evolution-triggers/index'
 
-export const evolutionEndpoints = {
-  evolutionChains: evolutionChains,
-  evolutionTriggers: evolutionTriggers
+export const EvolutionEndpoints = {
+  EvolutionChains,
+  EvolutionTriggers
 }

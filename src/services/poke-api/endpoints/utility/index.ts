@@ -1,5 +1,5 @@
-import * as languages from './languages/index'
+import * as Languages from './languages/index'
 
-export const utilityEndpoints = {
-  languages: languages
+export const UtilityEndpoints = {
+  languages: Languages
 }

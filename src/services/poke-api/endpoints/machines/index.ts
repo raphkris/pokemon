@@ -1,5 +1,5 @@
-import * as machines from './machines/index'
+import * as Machines from './machines/index'
 
-export const machinesEndpoints = {
-  machines: machines
+export const MachinesEndpoints = {
+  machines: Machines
 }

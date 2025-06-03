@@ -1,13 +1,13 @@
-import * as item from './item/index'
-import * as itemAttributes from './item-attributes/index'
-import * as itemCategories from './item-categories/index'
-import * as itemFlingEffects from './item-fling-effects/index'
-import * as itemPockets from './item-pockets/index'
+import * as Item from './item/index'
+import * as ItemAttributes from './item-attributes/index'
+import * as ItemCategories from './item-categories/index'
+import * as ItemFlingEffects from './item-fling-effects/index'
+import * as ItemPockets from './item-pockets/index'
 
-export const itemsEndpoints = {
-  item: item,
-  itemAttributes: itemAttributes,
-  itemCategories: itemCategories,
-  itemFlingEffects: itemFlingEffects,
-  itemPockets: itemPockets
+export const ItemsEndpoints = {
+  Item,
+  ItemAttributes,
+  ItemCategories,
+  ItemFlingEffects,
+  ItemPockets
 }

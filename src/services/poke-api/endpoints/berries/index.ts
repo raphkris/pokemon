@@ -1,9 +1,9 @@
-import * as berries from './berries/index'
-import * as berryFirmnesses from './berry-firmnesses/index'
-import * as berryFlavors from './berry-flavors/index'
+import * as Berries from './berries/index'
+import * as BerryFirmnesses from './berry-firmnesses/index'
+import * as BerryFlavors from './berry-flavors/index'
 
-export const berriesEndpoints = {
-  berries: berries,
-  berryFirmnesses: berryFirmnesses,
-  berryFlavors: berryFlavors
+export const BerriesEndpoints = {
+  Berries,
+  BerryFirmnesses,
+  BerryFlavors
 }
