@@ -8,7 +8,7 @@ export const getMachines = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { offset, limit })
+  return fetchData<NamedApiResourceList>(path, { limit, offset })
 }
 
 export const getMachine = async (id: number): Promise<Machine> => {

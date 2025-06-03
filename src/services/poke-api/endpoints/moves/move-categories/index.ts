@@ -8,7 +8,7 @@ export const getMoveCategories = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { offset, limit })
+  return fetchData<NamedApiResourceList>(path, { limit, offset })
 }
 
 export const getMoveCategory = async (idOrName: number | string): Promise<MoveCategory> => {

@@ -7,7 +7,7 @@ export const getLocations = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { offset, limit })
+  return fetchData<NamedApiResourceList>(path, { limit, offset })
 }
 
 export const getLocation = async (idOrName: number | string): Promise<Location> => {
