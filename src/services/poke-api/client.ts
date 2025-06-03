@@ -108,6 +108,13 @@ export async function fetchData<T>(
 
 export type Identifier = number | string
 
+/**
+ * Fetches a single item from the PokeAPI
+ * @template T The expected return type
+ * @param endpoint The API endpoint (e.g., 'pokemon')
+ * @param id The resource identifier (name or ID number)
+ * @returns Promise resolving to the requested item or undefined if no content
+ */
 export const getItem = async <T>(endpoint: string, id: Identifier): Promise<T | undefined> => {
   const url = buildUrl(endpoint, id)
 
@@ -116,6 +123,13 @@ export const getItem = async <T>(endpoint: string, id: Identifier): Promise<T | 
   return response
 }
 
+/**
+ * Fetches a paginated list of resources from the PokeAPI
+ * @param endpoint The API endpoint (e.g., 'pokemon')
+ * @param limit Maximum number of results to return
+ * @param offset Starting offset for paginated results
+ * @returns Promise resolving to NamedApiResourceList or undefined if no content
+ */
 export const listItems = async (
   endpoint: string,
   limit?: number,
@@ -134,6 +148,13 @@ export const listItems = async (
   return response
 }
 
+/**
+ * Constructs a complete URL for PokeAPI requests
+ * @param endpoint The API endpoint path
+ * @param id Optional resource identifier
+ * @param queryString Optional query parameters
+ * @returns Fully constructed API URL
+ */
 const buildUrl = (endpoint: string, id?: Identifier, queryString?: string) => {
   let url = `${API_BASE_URL}/${endpoint}`
 
@@ -149,6 +170,13 @@ const headers = {
   Accept: 'application/json'
 }
 
+/**
+ * Core data fetching function for PokeAPI
+ * @template T Expected response type
+ * @param url Complete API URL to fetch
+ * @returns Promise resolving to response data or undefined for 204 responses
+ * @throws Detailed error object with status code and error data
+ */
 const getData = async <T>(url: string): Promise<T | undefined> => {
   try {
     const response = await fetch(url, { headers })
