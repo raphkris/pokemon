@@ -1,17 +1,18 @@
-import { fetchData } from '@/services/poke-api/client'
+import { getResource, listResources } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { GrowthRate } from './types'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Pokemon.GrowthRate
 
-export const getGrowthRates = async (
+export const listGrowthRates = async (
   limit?: number,
   offset?: number
-): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
-export const getGrowthRate = async (idOrName: number | string): Promise<GrowthRate> => {
-  return fetchData<GrowthRate>(`${path}/${idOrName}`)
+export const getGrowthRate = async (id: Identifier): Promise<GrowthRate> => {
+  return getResource(path, id)
 }

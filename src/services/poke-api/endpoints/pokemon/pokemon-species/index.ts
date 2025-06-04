@@ -1,25 +1,18 @@
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PokemonSpecies } from './types'
-import { fetchData } from '@/services/poke-api/client'
+import { getResource, listResources } from '@/services/poke-api/client'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Pokemon.PokemonSpecies
 
-/**
- * Fetches a paginated list of Pokémon species or a single Pokémon species by id or name.
- *
- * - getPokemonSpecies(limit, offset) → paginated list
- * - getPokemonSpecies(idOrName) → single Pokémon species
- */
-export const getPokemonSpecies = (
-  arg1: number | string,
-  arg2?: number
-): Promise<NamedApiResourceList | PokemonSpecies> => {
-  if (typeof arg1 === 'number' && typeof arg2 !== 'undefined') {
-    // getPokemonSpecies(limit, offset)
-    return fetchData<NamedApiResourceList>(path, { limit: arg1, offset: arg2 })
-  } else {
-    // getPokemonSpecies(idOrName)
-    return fetchData<PokemonSpecies>(`${path}/${arg1}`)
-  }
+export const listPokemonSpecies = async (
+  limit?: number,
+  offset?: number
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
+}
+
+export const getPokemonSpecies = async (id: Identifier): Promise<PokemonSpecies> => {
+  return getResource(path, id)
 }

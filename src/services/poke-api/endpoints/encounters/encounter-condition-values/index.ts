@@ -1,19 +1,20 @@
-import { fetchData } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EncounterConditionValue } from './types'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
+import { getResource, listResources } from '@/services/poke-api/client'
 
 const path = PokeApiRoutes.Encounters.EncounterConditionValue
 
-export const getEncounterConditionValues = async (
+export const listEncounterConditionValues = async (
   limit?: number,
   offset?: number
-): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
 export const getEncounterConditionValue = async (
-  idOrName: number | string
+  id: Identifier
 ): Promise<EncounterConditionValue> => {
-  return fetchData<EncounterConditionValue>(`${path}/${idOrName}`)
+  return getResource(path, id)
 }

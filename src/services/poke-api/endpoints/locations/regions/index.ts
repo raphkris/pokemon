@@ -1,17 +1,18 @@
-import { fetchData } from '@/services/poke-api/client'
+import { getResource, listResources } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Region } from './types'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Locations.Region
 
 export const getRegions = async (
   limit?: number,
   offset?: number
-): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
-export const getRegion = async (idOrName: number | string): Promise<Region> => {
-  return fetchData<Region>(`${path}/${idOrName}`)
+export const getRegion = async (id: Identifier): Promise<Region> => {
+  return getResource(path, id)
 }

@@ -1,17 +1,18 @@
 import { PokeApiRoutes } from '@/services/poke-api/config'
-import { fetchData } from '../../../client'
+import { getResource, listResources } from '../../../client'
 import type { NamedApiResourceList } from '../../../types'
 import type { Language } from './types'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Utility.Language
 
-export const getLanguages = async (
+export const listLanguages = async (
   limit?: number,
   offset?: number
-): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
-export const getLanguage = async (idOrName: number | string): Promise<Language> => {
-  return fetchData<Language>(`${path}/${idOrName}`)
+export const getLanguage = async (id: Identifier): Promise<Language> => {
+  return getResource(path, id)
 }

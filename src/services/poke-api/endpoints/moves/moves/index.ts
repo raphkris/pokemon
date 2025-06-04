@@ -1,14 +1,18 @@
-import { fetchData } from '@/services/poke-api/client'
+import { getResource, listResources } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Move } from './types'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Moves.Move
 
-export const getMoves = async (limit?: number, offset?: number): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+export const listMoves = async (
+  limit?: number,
+  offset?: number
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
-export const getMove = async (idOrName: number | string): Promise<Move> => {
-  return fetchData<Move>(`${path}/${idOrName}`)
+export const getMove = async (id: Identifier): Promise<Move> => {
+  return getResource(path, id)
 }

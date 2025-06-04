@@ -1,17 +1,18 @@
-import { fetchData } from '@/services/poke-api/client'
+import { getResource, listResources } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { PokemonForm } from './types'
 import { PokeApiRoutes } from '@/services/poke-api/config'
+import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = PokeApiRoutes.Pokemon.PokemonForm
 
-export const getPokemonForms = async (
+export const listPokemonForms = async (
   limit?: number,
   offset?: number
-): Promise<NamedApiResourceList> => {
-  return fetchData<NamedApiResourceList>(path, { limit, offset })
+): Promise<NamedApiResourceList | undefined> => {
+  return listResources(path, limit, offset)
 }
 
-export const getPokemonForm = async (idOrName: number | string): Promise<PokemonForm> => {
-  return fetchData<PokemonForm>(`${path}/${idOrName}`)
+export const getPokemonForm = async (id: Identifier): Promise<PokemonForm> => {
+  return getResource(path, id)
 }

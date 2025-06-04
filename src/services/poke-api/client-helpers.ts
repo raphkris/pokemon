@@ -26,7 +26,7 @@ export const buildUrl = (endpoint: string, id?: Identifier, queryString?: string
  * @returns Promise resolving to response data or undefined for 204 responses
  * @throws Detailed error object with status code and error data
  */
-export const getData = async <T>(url: string): Promise<T | undefined> => {
+export const getData = async <T>(url: string): Promise<T> => {
   try {
     const headers = {
       'Content-Type': 'application/json',
