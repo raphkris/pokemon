@@ -16,7 +16,7 @@ const Encounters = {
   EncounterConditionValue: 'encounter-condition-value',
   EncounterCondition: 'encounter-condition',
   EncounterMethod: 'encounter-method'
-}
+} as const
 
 const Evolution = {
   EvolutionChain: 'evolution-chain',
