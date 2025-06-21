@@ -1,10 +1,10 @@
 import { getResource, listResources } from '@/services/poke-api/client'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Gender } from './types'
-import { PokeApiRoutes } from '@/services/poke-api/config'
+import { Routes } from '@/services/poke-api/config'
 import type { Identifier } from '@/services/poke-api/client-helpers'
 
-const path = PokeApiRoutes.Pokemon.Gender
+const path = Routes.Pokemon.Gender
 
 export const listGenders = async (
   limit?: number,

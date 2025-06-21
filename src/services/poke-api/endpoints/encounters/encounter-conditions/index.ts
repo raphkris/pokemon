@@ -1,10 +1,10 @@
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { EncounterCondition } from './types'
-import { PokeApiRoutes } from '@/services/poke-api/config'
+import { Routes } from '@/services/poke-api/config'
 import type { Identifier } from '@/services/poke-api/client-helpers'
 import { getResource, listResources } from '@/services/poke-api/client'
 
-const path = PokeApiRoutes.Encounters.EncounterCondition
+const path = Routes.Encounters.EncounterCondition
 
 export const listEncounterConditions = async (
   limit?: number,

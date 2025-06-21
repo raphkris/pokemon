@@ -1,10 +1,10 @@
 import { getResource, listResources } from '@/services/poke-api/client'
-import { PokeApiRoutes } from '@/services/poke-api/config'
+import { Routes } from '@/services/poke-api/config'
 import type { NamedApiResourceList } from '@/services/poke-api/types'
 import type { Identifier } from '@/services/poke-api/client-helpers'
 import type { Location } from './types'
 
-const path = PokeApiRoutes.Locations.Location
+const path = Routes.Locations.Location
 
 export const getLocations = async (
   limit?: number,

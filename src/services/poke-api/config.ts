@@ -82,7 +82,7 @@ const Utility = {
   Language: 'language'
 } as const
 
-export const PokeApiRoutes = {
+export const Routes = {
   Berries,
   Contests,
   Encounters,
