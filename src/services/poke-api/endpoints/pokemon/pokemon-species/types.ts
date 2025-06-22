@@ -33,7 +33,7 @@ export type PokemonSpecies = {
   flavor_text_entries: FlavorText[]
   form_descriptions: Description[]
   genera: Genus[]
-  varieties: any[]
+  varieties: PokemonSpeciesVariety[]
 }
 
 export type Genus = {

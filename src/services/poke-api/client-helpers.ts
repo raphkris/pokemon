@@ -57,7 +57,7 @@ export const getData = async <T>(url: string): Promise<T> => {
 
       const error = new Error(errorMessage) as Error & {
         status?: number
-        data?: any
+        data?: unknown
       }
 
       error.status = response.status
