@@ -1,4 +1,4 @@
-import type { NamedApiResource, VersionGameIndex } from '@/services/poke-api/types/common'
+import type { NamedApiResource, VersionGameIndex } from '../../../types/common'
 
 export type Pokemon = {
   id: number

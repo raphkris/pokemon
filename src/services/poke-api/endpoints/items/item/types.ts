@@ -6,7 +6,7 @@ import type {
   NamedApiResource,
   VerboseEffect,
   VersionGroupFlavorText
-} from '@/services/poke-api/types/common'
+} from '../../../types/common'
 
 export type Item = {
   id: number

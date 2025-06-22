@@ -2,3 +2,5 @@
 build
 coverage
 *.md
+eslint.config.js
+package.json

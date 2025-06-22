@@ -1,4 +1,4 @@
-import type { Name } from '@/services/poke-api/types/common'
+import type { Name } from '../../../types/common'
 
 export type MoveBattleStyle = {
   id: number

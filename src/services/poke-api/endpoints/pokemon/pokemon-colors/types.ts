@@ -1,4 +1,4 @@
-import type { Name, NamedApiResourceList } from '@/services/poke-api/types/common'
+import type { Name, NamedApiResourceList } from '../../../types/common'
 
 export type PokemonColor = {
   id: number

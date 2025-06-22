@@ -1,4 +1,4 @@
-import type { Name, NamedApiResource } from '@/services/poke-api/types/common'
+import type { Name, NamedApiResource } from '../../../types/common'
 
 export type Generation = {
   id: number

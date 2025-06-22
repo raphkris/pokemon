@@ -1,4 +1,4 @@
-import type { NamedApiResource, VersionEncounterDetail } from '@/services/poke-api/types/common'
+import type { NamedApiResource, VersionEncounterDetail } from '../../../types/common'
 
 export type LocationAreaEncounter = {
   location_area: NamedApiResource

@@ -1,4 +1,4 @@
-import type { Effect, FlavorText } from '@/services/poke-api/types/common'
+import type { Effect, FlavorText } from '../../../types/common'
 
 export type ContestEffect = {
   id: number

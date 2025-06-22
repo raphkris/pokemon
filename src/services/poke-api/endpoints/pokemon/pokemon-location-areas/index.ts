@@ -1,7 +1,7 @@
-import { getResource } from '@/services/poke-api/client'
+import { getResource } from '../../../client'
+import type { Identifier } from '../../../client-helpers'
+import { Routes } from '../../../config'
 import type { LocationAreaEncounter } from './types'
-import { Routes } from '@/services/poke-api/config'
-import type { Identifier } from '@/services/poke-api/client-helpers'
 
 const path = Routes.Pokemon.PokemonLocationArea
 

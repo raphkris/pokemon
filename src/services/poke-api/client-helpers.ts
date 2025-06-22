@@ -43,7 +43,7 @@ export const getData = async <T>(url: string): Promise<T> => {
       try {
         // Attempt to parse error response as JSON
         errorData = await response.json()
-      } catch (e) {
+      } catch {
         // If response is not JSON, use status text
         errorData = {
           message: response.statusText,

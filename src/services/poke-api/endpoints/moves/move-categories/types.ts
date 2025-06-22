@@ -1,4 +1,4 @@
-import type { Description, NamedApiResource } from '@/services/poke-api/types/common'
+import type { Description, NamedApiResource } from '../../../types/common'
 
 export type MoveCategory = {
   id: number

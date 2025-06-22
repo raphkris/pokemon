@@ -4,7 +4,7 @@ import type {
   Name,
   NamedApiResource,
   VerboseEffect
-} from '@/services/poke-api/types/common'
+} from '../../../types/common'
 import type { AbilityEffectChange } from '../../pokemon/abilities/types'
 
 export type Move = {

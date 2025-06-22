@@ -1,4 +1,4 @@
-import type { FlavorText, NamedApiResource } from '@/services/poke-api/types/common'
+import type { FlavorText, NamedApiResource } from '../../../types/common'
 
 export type SuperContestEffect = {
   id: number

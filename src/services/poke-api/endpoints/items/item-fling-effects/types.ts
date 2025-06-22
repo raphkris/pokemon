@@ -1,4 +1,4 @@
-import type { Effect, NamedApiResource } from '@/services/poke-api/types/common'
+import type { Effect, NamedApiResource } from '../../../types/common'
 
 export type ItemFlingEffect = {
   id: number

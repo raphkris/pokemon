@@ -1,4 +1,4 @@
-import type { GenerationGameIndex, Name, NamedApiResource } from '@/services/poke-api/types/common'
+import type { GenerationGameIndex, Name, NamedApiResource } from '../../../types/common'
 
 export type Location = {
   id: number

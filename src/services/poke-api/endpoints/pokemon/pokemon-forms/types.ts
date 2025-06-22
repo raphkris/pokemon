@@ -1,4 +1,4 @@
-import type { Name, NamedApiResource } from '@/services/poke-api/types/common'
+import type { Name, NamedApiResource } from '../../../types/common'
 import type { PokemonFormType } from '../pokemon/types'
 
 export type PokemonForm = {

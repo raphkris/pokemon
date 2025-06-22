@@ -1,4 +1,4 @@
-import type { Description, Name, NamedApiResource } from '@/services/poke-api/types/common'
+import type { Description, Name, NamedApiResource } from '../../../types/common'
 
 export type MoveLearnMethod = {
   id: number
