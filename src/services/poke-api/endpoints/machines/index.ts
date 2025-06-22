@@ -1,5 +1,6 @@
-import * as Machines from './machines/index'
+import * as Machines from './machines'
 
-export const MachinesEndpoints = {
-  machines: Machines
+export const Endpoints = {
+  GetMachine: Machines.getMachine,
+  ListMachines: Machines.listMachines
 }

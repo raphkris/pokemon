@@ -1,17 +1,24 @@
-import * as MoveAilments from './move-ailments/index'
-import * as MoveBattleStyles from './move-battle-styles/index'
-import * as MoveCategories from './move-categories/index'
-import * as MoveDamageClasses from './move-damage-classes/index'
-import * as MoveLearnMethods from './move-learn-methods/index'
-import * as MoveTargets from './move-targets/index'
-import * as Moves from './moves/index'
+import * as MoveAilments from './move-ailments'
+import * as MoveBattleStyles from './move-battle-styles'
+import * as MoveCategories from './move-categories'
+import * as MoveDamageClasses from './move-damage-classes'
+import * as MoveLearnMethods from './move-learn-methods'
+import * as MoveTargets from './move-targets'
+import * as Moves from './moves'
 
-export const MovesEndpoints = {
-  MoveAilments,
-  MoveBattleStyles,
-  MoveCategories,
-  MoveDamageClasses,
-  MoveLearnMethods,
-  MoveTargets,
-  Moves
+export const Endpoints = {
+  GetMoveAilment: MoveAilments.getMoveAilment,
+  ListMoveAilments: MoveAilments.listMoveAilments,
+  GetMoveBattleStyle: MoveBattleStyles.getMoveBattleStyle,
+  ListMoveBattleStyles: MoveBattleStyles.listMoveBattleStyles,
+  GetMoveCategory: MoveCategories.getMoveCategory,
+  ListMoveCategories: MoveCategories.listMoveCategories,
+  GetMoveDamageClass: MoveDamageClasses.getMoveDamageClass,
+  ListMoveDamageClasses: MoveDamageClasses.listMoveDamageClasses,
+  GetMoveLearnMethod: MoveLearnMethods.getMoveLearnMethod,
+  ListMoveLearnMethods: MoveLearnMethods.listMoveLearnMethods,
+  GetMoveTarget: MoveTargets.getMoveTarget,
+  ListMoveTargets: MoveTargets.listMoveTargets,
+  GetMove: Moves.getMove,
+  ListMoves: Moves.listMoves
 }

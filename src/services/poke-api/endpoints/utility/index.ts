@@ -1,5 +1,6 @@
-import * as Languages from './languages/index'
+import * as Languages from './languages'
 
-export const UtilityEndpoints = {
-  languages: Languages
+export const Endpoints = {
+  GetLanguage: Languages.getLanguage,
+  ListLanguages: Languages.listLanguages
 }

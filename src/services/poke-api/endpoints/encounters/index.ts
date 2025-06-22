@@ -1,9 +1,12 @@
-import * as EncounterConditionValues from './encounter-condition-values/index'
-import * as EncounterConditions from './encounter-conditions/index'
-import * as EncounterMethods from './encounter-methods/index'
+import * as EncounterConditionValues from './encounter-condition-values'
+import * as EncounterConditions from './encounter-conditions'
+import * as EncounterMethods from './encounter-methods'
 
-export const EncountersEndpoints = {
-  EncounterConditionValues,
-  EncounterConditions,
-  EncounterMethods
+export const Endpoints = {
+  GetEncounterConditionValue: EncounterConditionValues.getEncounterConditionValue,
+  ListEncounterConditionValues: EncounterConditionValues.listEncounterConditionValues,
+  GetEncounterCondition: EncounterConditions.getEncounterCondition,
+  ListEncounterConditions: EncounterConditions.listEncounterConditions,
+  GetEncounterMethod: EncounterMethods.getEncounterMethod,
+  ListEncounterMethods: EncounterMethods.listEncounterMethods
 }
