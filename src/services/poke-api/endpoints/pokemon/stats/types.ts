@@ -1,4 +1,4 @@
-import type { ApiResource, Name, NamedApiResource } from '@/services/poke-api/types'
+import type { ApiResource, Name, NamedApiResource } from '@/services/poke-api/types/common'
 
 export type Stat = {
   id: number

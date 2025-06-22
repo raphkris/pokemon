@@ -1,4 +1,4 @@
-import type { NamedApiResource } from '@/services/poke-api/types'
+import type { NamedApiResource } from '@/services/poke-api/types/common'
 
 export type VersionGroup = {
   id: number

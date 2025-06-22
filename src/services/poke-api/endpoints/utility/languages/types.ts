@@ -1,4 +1,4 @@
-import type { Name } from '../../../types'
+import type { Name } from '@/services/poke-api/types/common'
 
 export type Language = {
   id: number

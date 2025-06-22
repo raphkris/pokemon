@@ -4,7 +4,7 @@ import type {
   FlavorText,
   Name,
   NamedApiResource
-} from '@/services/poke-api/types'
+} from '@/services/poke-api/types/common'
 
 export type PokemonSpecies = {
   id: number

@@ -1,4 +1,4 @@
-import type { Name } from '@/services/poke-api/types'
+import type { Name } from '@/services/poke-api/types/common'
 
 export type EncounterMethod = {
   id: number

@@ -1,4 +1,4 @@
-import type { Name, NamedApiResource } from '@/services/poke-api/types'
+import type { Name, NamedApiResource } from '@/services/poke-api/types/common'
 
 export type ItemPocket = {
   id: number

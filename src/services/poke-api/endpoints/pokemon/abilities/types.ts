@@ -1,4 +1,9 @@
-import type { Effect, Name, NamedApiResource, VerboseEffect } from '@/services/poke-api/types'
+import type {
+  Effect,
+  Name,
+  NamedApiResource,
+  VerboseEffect
+} from '@/services/poke-api/types/common'
 
 export type Ability = {
   id: number

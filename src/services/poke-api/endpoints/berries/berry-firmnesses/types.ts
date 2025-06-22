@@ -1,4 +1,4 @@
-import type { Name, NamedApiResourceList } from '@/services/poke-api/types'
+import type { Name, NamedApiResourceList } from '@/services/poke-api/types/common'
 
 export type BerryFirmness = {
   id: number

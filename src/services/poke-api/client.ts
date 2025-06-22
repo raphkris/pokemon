@@ -1,6 +1,6 @@
 import { QueryClient } from '@tanstack/react-query'
-import type { NamedApiResourceList } from './types'
 import { buildUrl, getData, type Identifier } from './client-helpers'
+import type { NamedApiResourceList } from './types/common'
 
 /**
  * Creates and configures a TanStack QueryClient.

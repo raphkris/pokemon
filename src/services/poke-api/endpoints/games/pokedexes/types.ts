@@ -1,4 +1,4 @@
-import type { Description, Name, NamedApiResource } from '@/services/poke-api/types'
+import type { Description, Name, NamedApiResource } from '@/services/poke-api/types/common'
 
 export type Pokedex = {
   id: number

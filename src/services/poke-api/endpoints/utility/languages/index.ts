@@ -1,8 +1,8 @@
-import { Routes } from '@/services/poke-api/config'
-import { getResource, listResources } from '../../../client'
-import type { NamedApiResourceList } from '../../../types'
-import type { Language } from './types'
 import type { Identifier } from '@/services/poke-api/client-helpers'
+import { Routes } from '@/services/poke-api/config'
+import type { NamedApiResourceList } from '@/services/poke-api/types/common'
+import { getResource, listResources } from '../../../client'
+import type { Language } from './types'
 
 const path = Routes.Utility.Language
 

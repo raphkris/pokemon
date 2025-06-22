@@ -1,11 +1,11 @@
 import type {
-  AbilityEffectChange,
   ApiResource,
   MachineVersionDetail,
   Name,
   NamedApiResource,
   VerboseEffect
-} from '@/services/poke-api/types'
+} from '@/services/poke-api/types/common'
+import type { AbilityEffectChange } from '../../pokemon/abilities/types'
 
 export type Move = {
   id: number

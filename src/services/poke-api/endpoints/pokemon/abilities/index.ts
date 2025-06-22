@@ -1,7 +1,8 @@
 import { getResource, listResources } from '@/services/poke-api/client'
-import { Routes } from '@/services/poke-api/config'
-import type { Ability, NamedApiResourceList } from '@/services/poke-api/types'
 import type { Identifier } from '@/services/poke-api/client-helpers'
+import { Routes } from '@/services/poke-api/config'
+import type { NamedApiResourceList } from '@/services/poke-api/types/common'
+import type { Ability } from './types'
 
 const path = Routes.Pokemon.Ability
 
