@@ -1,7 +1,0 @@
-export * from './move-ailments/types'
-export * from './move-battle-styles/types'
-export * from './move-categories/types'
-export * from './move-damage-classes/types'
-export * from './move-learn-methods/types'
-export * from './move-targets/types'
-export * from './moves/types'
