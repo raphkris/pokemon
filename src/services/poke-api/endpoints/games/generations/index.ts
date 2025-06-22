@@ -6,7 +6,7 @@ import type { Generation } from './types'
 
 const path = Routes.Games.Generation
 
-export const getGenerations = async (
+export const listGenerations = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

@@ -6,7 +6,7 @@ import type { Characteristic } from './types'
 
 const path = Routes.Pokemon.Characteristic
 
-export const getCharacteristics = async (
+export const listCharacteristics = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

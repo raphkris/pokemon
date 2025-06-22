@@ -6,7 +6,7 @@ import type { EvolutionTrigger } from './types'
 
 const path = Routes.Evolution.EvolutionTrigger
 
-export const getEvolutionTriggers = async (
+export const listEvolutionTriggers = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

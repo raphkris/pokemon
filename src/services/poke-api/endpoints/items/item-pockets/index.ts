@@ -6,7 +6,7 @@ import type { ItemPocket } from './types'
 
 const path = Routes.Items.ItemPocket
 
-export const getItemPockets = async (
+export const listItemPockets = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

@@ -6,7 +6,7 @@ import type { BerryFirmness } from './types'
 
 const path = Routes.Berries.BerryFirmness
 
-export const getBerryFirmnesses = async (
+export const listBerryFirmnesses = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

@@ -6,7 +6,7 @@ import type { ItemFlingEffect } from './types'
 
 const path = Routes.Items.ItemFlingEffect
 
-export const getItemFlingEffects = async (
+export const listItemFlingEffects = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

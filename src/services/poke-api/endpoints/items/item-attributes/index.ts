@@ -6,7 +6,7 @@ import type { ItemAttribute } from './types'
 
 const path = Routes.Items.ItemAttribute
 
-export const getItemAttributes = async (
+export const listItemAttributes = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

@@ -6,7 +6,7 @@ import type { ContestType } from './types'
 
 const path = Routes.Contests.ContestType
 
-export const getContestTypes = async (
+export const listContestTypes = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

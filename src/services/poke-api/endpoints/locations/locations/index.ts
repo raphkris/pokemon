@@ -6,7 +6,7 @@ import type { Location } from './types'
 
 const path = Routes.Locations.Location
 
-export const getLocations = async (
+export const listLocations = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

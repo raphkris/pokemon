@@ -6,7 +6,7 @@ import type { Version } from './types'
 
 const path = Routes.Games.Version
 
-export const getVersions = async (
+export const listVersions = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

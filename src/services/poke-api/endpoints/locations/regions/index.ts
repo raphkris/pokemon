@@ -6,7 +6,7 @@ import type { Region } from './types'
 
 const path = Routes.Locations.Region
 
-export const getRegions = async (
+export const listRegions = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

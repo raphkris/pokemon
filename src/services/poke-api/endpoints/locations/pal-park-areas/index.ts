@@ -6,7 +6,7 @@ import type { PalParkArea } from './types'
 
 const path = Routes.Locations.PalParkArea
 
-export const getPalParkAreas = async (
+export const listPalParkAreas = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

@@ -6,7 +6,7 @@ import type { Pokedex } from './types'
 
 const path = Routes.Games.Pokedex
 
-export const getPokedexes = async (
+export const listPokedexes = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {

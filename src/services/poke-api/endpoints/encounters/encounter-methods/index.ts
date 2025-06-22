@@ -6,7 +6,7 @@ import type { EncounterMethod } from './types'
 
 const path = Routes.Encounters.EncounterMethod
 
-export const getEncounterMethods = async (
+export const listEncounterMethods = async (
   limit?: number,
   offset?: number
 ): Promise<NamedApiResourceList | undefined> => {
