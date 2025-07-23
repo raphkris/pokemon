@@ -56,4 +56,4 @@ message = "Enter the scope for this commit (optional):"
 [[tool.commitizen.customize.questions]]
 type = "input"
 name = "message"
-message = "Enter commit message: "
+message = "Enter commit message:"
